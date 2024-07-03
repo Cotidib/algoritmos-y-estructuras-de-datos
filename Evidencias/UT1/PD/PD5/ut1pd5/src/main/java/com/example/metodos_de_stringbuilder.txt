@@ -1,0 +1,62 @@
+● Constructores
+StringBuilder son como los objetos String, pero se pueden modificar. 
+Internamente, estos objetos se tratan como arrays de longitud variable que contienen una secuencia de caracteres.
+
+StringBuilder()
+Crea un StringBuilder con capacidad 16
+
+StringBuilder(CharSequence cs)
+Crea un StringBuilder que contiene los mismos caracteres que se especifica en cs, más 16 espacios vacios extra
+
+StringBuilder(int initCapacity)
+Crea un StringBuilder vacio con capacidad igual al initCapacity
+
+StringBuilder(String s)
+Crea un StringBuilder inicializado con el string s y 16 espacios vacios adicionales
+
+● setLength
+void setLength(int newLength)
+Setea el largo de la secuencia de caracteres. Si el nuevo largo es menor al existente, la secuencia de caracteres se trunca.
+Si el nuevo largo es mayor, se agregan caracteres null al final
+
+● ensureCapacity
+void ensureCapacity(int minCapacity)
+Verifica que la capacidad sea por lo menos igual al numero especificado
+
+● append
+StringBuilder append(boolean b)
+StringBuilder append(char c)
+StringBuilder append(char[] str)
+StringBuilder append(char[] str, int offset, int len)
+StringBuilder append(double d)
+StringBuilder append(float f)
+StringBuilder append(int i)
+StringBuilder append(long lng)
+StringBuilder append(Object obj)
+StringBuilder append(String s)
+Agrega un elemento al StringBuilder. La data se convierte a string antes de ser agregada.
+
+● insert
+StringBuilder insert(int offset, boolean b)
+StringBuilder insert(int offset, char c)
+StringBuilder insert(int offset, char[] str)
+StringBuilder insert(int index, char[] str, int offset, int len)
+StringBuilder insert(int offset, double d)
+StringBuilder insert(int offset, float f)
+StringBuilder insert(int offset, int i)
+StringBuilder insert(int offset, long lng)
+StringBuilder insert(int offset, Object obj)
+StringBuilder insert(int offset, String s)
+Inserta el segundo elemento, usando el primer numero para indicar el indice antes de donde insertar
+
+● delete
+StringBuilder delete(int start, int end)
+Remueve una subsecuencia desde el indice start al indice end
+
+● deleteCharAt
+StringBuilder deleteCharAt(int index)
+Remueve el caracter en el indice especificado
+
+● reverse
+StringBuilder reverse()
+Invierte la secuencia de caracteres

@@ -1,0 +1,8 @@
+algoritmo,tiempo,memoria
+MedicionPrefijoLinkedList,115546500,937264
+MedicionPrefijoTrie,451000,10450571
+MedicionPrefijoHashMap,106119400,1721441
+algoritmo,tiempo,memoria
+MedicionPrefijoLinkedList,116782900,937264
+MedicionPrefijoTrie,460000,10450571
+MedicionPrefijoHashMap,93634200,1721441

@@ -1,0 +1,10 @@
+EJERCICIO 20
+Construir un ejemplo en el que una busqueda por interpolacion examine cada elemento de la matriz de entrada:
+
+Con una matriz de entrada de [1, 2, 4, 8, 16, 32, 64, 128, 256, 512], para encontrar el elemento 64 la búsqueda por interpolación terminará examinando cada elemento de la matriz debido al crecimiento exponiencial de los elementos, 
+lo que resultará en un rendimiento similar a una búsqueda lineal, es decir, O(n). Esto se debe a que a diferencia de la búsqueda binaria, que garantiza la mitad del tamaño del espacio de búsqueda con cada iteración, una interpolación deficiente puede reducir/aumentar el índice medio en solo uno.
+
+EJERCICIO 23
+a.El tiempo de ejecucion de la funcion contains es de O(N^2)
+b. 100 * 4^2
+c. O(N log n), donde N es la cantidad de búsquedas binarias que se realizan y n es el tamaño de los arreglos.

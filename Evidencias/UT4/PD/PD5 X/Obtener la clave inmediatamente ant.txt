@@ -1,0 +1,41 @@
+Obtener la clave inmediatamente anterior a una clave dada
+
+
+Descripcion
+Si la etiqueta actual es menor a la etiqueta a comparar, se evalua si el hijo izquierdo del nodo actual no es nulo. En ese caso se evalua si la etiqueta a buscar es igual a la etiqueta del hijo izquierdo del nodo actual. Si es asi, se retorna la etiqueta del nodo actual. Sino se llama recursivamente a la funcion sobre el hijo izquierdo.
+Si la etiqueta actual es mayor a la etiqueta a comparar, se evalua si el hijo derecho del nodo actual no es nulo. En ese caso se evalua si la etiqueta a buscar es igual a la etiqueta del hijo derecho del nodo actual. Si es asi, se retorna la etiqueta del nodo actual. Sino se llama recursivamente a la funcion sobre el hijo derecho.
+
+Precondiciones
+Existe una etiqueta no nula que existe dentro del arbol y es pasada como parametro de la funcion
+
+Postcondiciones
+El arbol no se modifica
+
+Seudocodigo
+funcion Comparable obtenerClaveAnterior (Comparable etiquetaDeseada)
+si (etiquetaDeseada < etiqueta)
+ si (hijoIzq <> nulo)
+  si (etiquetaDeseada == hijoIzq.etiqueta)
+    devolver etiqueta
+  sino
+    devolver hijoIzq.obtenerClaveAnterior(etiquetaDeseada)
+  finsi
+ finsi
+si (etiquetaDeseada > etiqueta)
+  si (hijoDer <> nulo)
+   si (etiquetaDeseada == hijoDer.etiqueta)
+     devolver etiqueta
+   sino
+     devolver hijoDer.obtenerClaveAnterior(etiquetaDeseada)
+   finsi
+  finsi
+finsi
+fin
+
+
+Tiempo de Ejecucion
+Es un algoritmo con un comportamiento practicamente igual al de una busqueda, por lo que el tiempo de ejecucion va a ser de O(logN)
+
+
+Caso de Prueba
+Insertar en un arbol valores predeterminados. Ejecutar la funcion ingresando una etiquetaDeseada cuya clave anterior sea conocida. Comparar resultados. Probar distintas etiquetasDeseadas, seleccionando entre ellas eitquetas que pertenezcan a hojas, a la raiz y a nodos intermedios.

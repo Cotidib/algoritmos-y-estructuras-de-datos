@@ -1,0 +1,120 @@
+EJERCICIO 1
+
+- Crear los elementos y la lista
+
+Lenguaje natural:
+Se inicializa la lista. Se inicializan la cantidad de elementos necesarios.
+
+Precondiciones:
+Existe la clase Lista que implementa ILista
+Existe la clase Nodo que implementa INodo
+
+Postcondicions:
+La lista es una instancia de Lista
+Los elementos son instancias de Nodo
+
+Seudocodigo:
+inicializar lista
+inicializar elemento1
+iniciializar elemento2
+inicializar elemento3
+
+- Insertar un elemento en una lista
+
+Lenguaje natural:
+Se recorren todos los elementos de la lista. Despues de que se llega al ultimo elemento,
+se asocia el siguiente del ulitmo elemento con el elemento nuevo.
+
+Precondiciones:
+Existe una lista de la clase Lista que implmenta ILista
+Existe la clase Nodo que implementa INodo
+Existe un elemento nuevoNodo de la clase Nodo para insertar
+nuevoNodo no es nulo
+
+Postcondiciones:
+La lista no esta vacia
+La lista es modificada
+
+Seudocodigo:
+inicializar actual <- lista cabeza
+si actual == nulo
+	actual <- nodoNuevo
+sino
+	mientras actualSiguiente <> nulo:
+		actual <- actualSiguiente
+	fin mientras
+	actualSiguiente <- nodoNuevo
+fin si
+	
+- Buscar un elemento en una lista
+
+Lenguaje natural:
+Se recorre los elementos de la lista. En cada iteracion se compara si el elemento actual es el elemento que se busca.
+Si eso es verdadero, se sale del bucle y se devuelve dicho elemento.
+
+Precondiciones:
+Existe una lista no vacia
+Existe una clave ingresada para la comparacion
+Todos los elementos tienen una clave
+
+Postcondiciones:
+La lista no se modifica
+
+Seudocodigo:
+inicializar actual <- lista cabeza
+mientras actualSiguiente <> nulo:
+	si actualClave == clave
+		retornar actual
+	sino
+		actual <- actualSiguiente
+	fin si
+fin mientras
+
+
+- Listar todos los elementos de una lista
+ 
+Lenguaje natural:
+Se recorre la lista hasta que se llega a que la referencia al siguiente elemento es nulo. 
+En cada iteracion se imprime el valor del elemento.
+
+Precondiciones:
+Existe una lista no vacia
+Existe un metodo para imprimir en consola
+
+Postcondiciones:
+La lista no se modifica
+
+Seudocodigo:
+inicializar actual <- lista cabeza
+mientras actual <> nulo:
+	imprimir(actual)
+	actual <- actualSiguiente
+fin mientras
+
+- Eliminar un elemento de la lista:
+
+Lenguaje natural:
+Se recorre los elementos de la lista. En cada iteracion se compara si el elemento actual es el elemento que se busca.
+Si eso es verdadero, se mueve la referencia siguiente del elemento anterior hacia el elemento que le sigue al que queremos eliminar.
+
+Precondiciones:
+Existe una lista no vacia
+Existe una clave ingresada para la comparacion
+Todos los elementos tienen una clave
+
+Postcondiciones:
+La lista es modificada
+La lista tiene menos elementos
+
+Seudocodigo:
+inicializar actual <- lista cabeza
+mientras actual <> nulo:
+	si actualSiguienteClave == clave
+		actualSiguiente <- actualSiguienteSiguiente
+	sino
+		actual <- actualSiguiente
+	fin si
+fin mientras
+
+
+

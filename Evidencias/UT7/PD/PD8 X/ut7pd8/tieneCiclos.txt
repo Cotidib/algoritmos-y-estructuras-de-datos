@@ -1,0 +1,28 @@
+SEUDOCODIGO
+
+funcion Grafo.tieneCiclo()
+        camino <- nueva Lista
+        para cada vertice de this.vertices
+            si vertice.tieneCiclo(camino)
+                return true
+            finsi
+        finpara
+        return false
+fin
+
+funcion Vertice.tieneCiclo(camino)
+        si camino.contains(this.etiqueta)
+            return true;
+        finsi
+
+        camino.add(this.etiqueta);
+
+        para cada adyacencia de this.adyacentes
+            si adyacencia.tieneCiclo(camino)
+                return true;
+            finsi
+        finpara
+
+        camino.remove(this.etiqueta);
+        return false;
+fin

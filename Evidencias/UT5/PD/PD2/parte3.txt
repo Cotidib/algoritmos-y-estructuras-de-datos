@@ -1,0 +1,5 @@
+¿Cuántas comparaciones realiza el algoritmo de búsqueda si el argumento es “Programa”? 7 (primero en ser insertado)
+¿Cuántas comparaciones realiza el algoritmo de búsqueda si el argumento es “Proselitismo? 3
+¿Cuántas comparaciones se realizan para insertar la palabra “cazadores”? 4
+¿cuál es la altura del árbol trie resultante? 12
+¿cuál es su tamaño? 45

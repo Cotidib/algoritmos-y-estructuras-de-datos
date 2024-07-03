@@ -1,0 +1,17 @@
+EJERCICIO 1
+
+miFunción
+Desde i = 1 hasta N-1 hacer
+ Desde j = N hasta i+1 hacer
+ Si arreglo[j].clave < arreglo[j-1].clave entonces
+ Intercambia(arreglo[j], arreglo[j-1])
+ Fin si
+ Fin desde
+Fin desde
+Fin
+
+En miFuncion se empieza a recorrer desde N hacia atras, pero con cada interacion completa, 
+es como si ademas se moviera tambien un puntero inicial de manera que la proxima iteracion sera de N-1 elementos, es decir, un elemento mas corto.
+Por esto, va haber un total de N*(N-1) ejecuciones como maximo (en el peor de los casos), por lo que el orden de tiempo de ejecucion es cuadratico.
+
+

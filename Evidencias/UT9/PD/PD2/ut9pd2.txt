@@ -1,0 +1,7 @@
+EJERCICO 1
+
+La ordenacion shell es capaz de ordenar una matriz si el gap termina en algun momento en 1. Shell sugirio emepzar con un valor
+de gap igual a N/2 e ir dividiendo a la mitad hasta alcanzar 1. Otras secuencias puede ser espaciados impares o la division por 2,2
+siendo este ultimo el mas eficiente segun la tabla de tiempos de ejecucion. Cuando se usan los incrementos de Shell, el peor caso es O(N^2)
+
+(Funete: Estructura de Datos en Java, Mark Allen Weiss, capitulo 8.4).

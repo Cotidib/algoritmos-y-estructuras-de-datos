@@ -1,0 +1,29 @@
+Obtener la mayor clave del árbol
+
+Descripcion:
+Se recorre el arbol del lado derecho hasta llegar a la ultima hoja
+
+Precondiciones:
+Existe un arbol no nulo
+
+Postcondiciones:
+El arbol no se modifica
+
+Seudocodigo:
+
+Clase TElementoAB
+funcion Comparable obtenerMayorClave()
+si hizoDer == nulo
+ devolver etiqueta
+sino
+ devolver hijoDer.obtenerMayorClave()
+finsi
+fin
+
+Tiempo de Ejecucion:
+En el peor de los casos va a ser de O(N), ya que el arbol podria tener una unica rama. Si fuera un arbol balanceado seria de O(logN)
+
+Caso de Prueba 1:
+Se obtiene la mayor clave utilizando la funcion y se compara dicho valor con los demas valores de los nodos del arbol, verificando que sea mayor.
+Caso de Prueba 2:
+Se crea un arbol con valores predeterminados. Se ejecuta la funcion obtenerMenorClave y se espera que el resultado sea igual al valor más grande insertado en el arbol

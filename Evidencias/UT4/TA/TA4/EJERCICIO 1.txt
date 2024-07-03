@@ -1,0 +1,73 @@
+EJERCICIO 1
+
+Equipo A - contar hojas
+Precondiciones
+Existe un arbol no nulo
+
+Postcondiciones
+El arbol no se modifica
+
+Seudocodigo
+funcion int contarHojas()
+inicializar resultado <- 0
+si hijoIzq == nulo Y hijoDer == nulo
+ resultado <- resultado + 1
+finsi
+si hijoIzq <> nulo
+ resultado <- hijoIzq.contarHojas()
+finsi
+si hijoDer <> nulo
+ resultado <- hijoDer.contarHojas()
+finsi
+devolver resultado
+fin
+
+Caso de Prueba
+Crear un arbol e insertar los valores T,Y,U,P,L,K,J,S,A,Z,X,C,V,N.
+La cantidad de hojas del arbol es 5. Ejecutar la funcion y comparar el resultado con el valor esperado.
+
+Seudocodigo
+test probarContarHojas
+inicializar arbol
+arbol.insertar T,Y,U,P,L,K,J,S,A,Z,X,C,V,N
+hojas <- arbol.contarHojas()
+validar hojas == 5
+fintest
+
+Equipo B - nivel de hojas
+Precondiciones
+Existe un arbol no nulo
+Existe una etiqueta no nula
+La etiqueta se encuentra dentro del arbol
+
+Postcondiciones
+El arbol no se modifica
+
+Seudocodigo
+funcion int obtenerNivel (unaEtiqueta, nivelActual)
+si unaEtiqueta == etiqueta
+  devolver nivelActual
+si unaEtiqueta < etiqueta
+  si hijoIzq <> nulo
+   devolver hijoIzq.obtenerNivel(unaEtiqueta, nivelActual + 1)
+  finsi
+si unaEtiqueta > etiqueta
+  si hijoDer <> nulo
+   devolver hijoDer.obtenerNivel(unaEtiqueta, nivelActual + 1)
+  finsi
+finsi
+devolver -1
+fin
+
+Caso de Prueba
+Crear un arbol e insertar los valores T,Y,U,P,L,K,J,S,A,Z,X,C,V,N. Ejecutar la funcion sobre la etiqueta raiz del arbol (T). Comparar el resultado con el valor esperado, que es 0. Ejecutar la funcion sobre una etiqueta que no este en el arbol. Comparar el resultado con el valor esperado, que es -1. 
+
+Seudocodigo
+test probarObtenerNivel
+inicializar arbol
+arbol.insertar T,Y,U,P,L,K,J,S,A,Z,X,C,V,N
+nivelRaiz <- arbol.obtenerNivel(T)
+validar nivelRaiz == 0
+nivelNoExiste <- arbol.obtenerNivel(B)
+validar nivelNoExiste = -1
+fintest

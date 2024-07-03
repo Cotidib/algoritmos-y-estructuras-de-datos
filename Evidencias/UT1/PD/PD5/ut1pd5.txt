@@ -1,0 +1,14 @@
+EJERCICIO 8
+25 + 16 espacios vacios
+
+EJERCICIO 9
+
+A) 32
+B) e
+C) String b = hannah.charAt(15);
+
+EJERCICIO 10
+El largo es 3 y el string devuelto es "car"
+
+EJERCICIO 11
+el valor de result es "e 2am laste"

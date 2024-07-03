@@ -1,0 +1,22 @@
+EJERCICIO 1
+
+A) La variable de clase es x, ya que esta declara como static y no es necesario tener una instancia de la clase para llamarla. Basta con llamar a la clase.
+B) La variable de instancia es y, ya que se necesita instanciar un objeto de la clase para poder llamarla.
+C) La variable static es compartida entre las instancias, entonces cuando se modifica en una de ellas, se modifica en todas
+a.y = 5
+b.y = 6
+a.x = 2
+b.x = 2
+
+EJERCICIO 2
+No se esta instanciando myRect correctamente, solo se esta declarando. Si el objeto no se instancia, no podemos acceder a sus atributos.
+
+EJERCICIO 3
+1) Luego de que el codigo se ejecuta:
+Hay 1 referencia al objeto students
+Hay 1 referencias al objeto "Peter Parker" (students[0])
+Nada se elimina en el garbage collector porque quedan referencias apuntando a todos los objetos creados
+
+2) Liberando la memoria que estaba ocupado el objeto que se va a eliminar
+
+3) (ejercicio en Main en carpeta ut1pd4)

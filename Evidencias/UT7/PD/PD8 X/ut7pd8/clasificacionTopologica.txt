@@ -1,0 +1,25 @@
+PRECONDICIONES
+El grafo es un grafo aciclico
+
+POSTCONDICIONES
+No se modifica el grafo
+Se modifica la lista de visitados
+Se devuelve la lista de visitados en orden inverso
+
+SEUDOCODIGO
+
+funcion Grafo.clasificacionTopologica(verticeOrigen) // O(a)
+        vertice <- buscarVertice(verticeOrigen);
+        verticesAccesibles <- nueva Lista
+        vertice.clasificacionTopologica(verticesAccesibles);
+        devolver verticesAccesibles;
+fin funcion
+
+funcion Vertice.clasificacionTopologica(visitados) //O(a)
+        para cada adyacencia de this.adyacentes 
+            si no visitados.contains(adyacencia)
+                adyacencia.clasificacionTopologica(visitados);
+            fin si
+        fin para cada
+        visitados.add(this);
+fin funcion

@@ -1,0 +1,19 @@
+funcion insertar(unaEtiqueta, etiquetaPadre)
+        nuevoHijo <- nuevo NodoArbolGenerico(unaEtiqueta)
+        padre <- buscar(etiquetaPadre);
+        si padre <> null
+            si padre.hijoIzquierdo == null
+                padre.hijoIzquierdo <- nuevoHijo
+                evolvertrue
+            sino
+                aux <- padre.hijoIzquierdo;
+                mientras aux.hermanoDerecho <> null
+                    aux = aux.hermanoDerecho
+                fin mientras
+                aux.hermanoDerecho <- nuevoHijo
+                devolver true
+            finsi
+        sino
+            devolver false
+	finsi
+fin funcion

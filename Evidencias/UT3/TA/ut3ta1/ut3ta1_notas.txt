@@ -1,0 +1,31 @@
+EJERCICIO 0 PREGUNTA 3
+
+temporal.siguiente = actual.siguiente
+actual.siguiente = temporal
+
+Esto hace que temporal quede insertado entre actual y actual.siguiente
+
+EJERCICIO 0 PREGUNTA X
+
+temporal = actual.siguiente
+actual.siguiente = temporal.siguiente
+
+Esto hace que temporal se elimine
+
+EJERCICIO 1
+Objeto Producto:
+String nombre = char[30]		-> 30*2 bytes
+String codigo = char[20]		-> 20*2 bytes
+Float precio 				-> 4 bytes
+
+¿Cuál es el costo de memoria en cada caso? (usando arrays o listas encadenadas)
+El costo de memoria del array depende del tamaño con el cual se inicialice
+El costo de memoria de una lista encadenada depende de la cantidad de productos ingresados en el sistema (nodos)
+En un array la memoria es continua, para una lista encadenada la memoria puede estar distribuida
+
+¿Cuáles son las consideraciones que tu Equipo haría referentes a la cantidad de
+productos que soporta cada tipo de estructura?
+Con un array la cantidad de productos seria fijo y con una lista la cantidad de productos que se puede almacenar es variable
+
+¿Cuáles son las consideraciones que tu Equipo haría referentes a la eficiencia de
+las operaciones solicitadas, dependiendo de cada tipo de implementación?

@@ -1,0 +1,63 @@
+EJERCICIO 1
+
+public static int enRango (int[] a, int bajo, int alto) {
+int contador = 0; 			#ORDEN 1
+for (int i=0; i<a.length; i++) {	#ORDEN N (lineal) (no sabemos a.lenght)
+    if (a[i] >= bajo && a[i] < alto) 	(el orden del if es el orden del contenido)
+	contador++;			#ORDEN 1
+    }
+return contador;
+}
+
+
+EJERCICIO 2
+unaFunción ( N de tipo entero)
+ i = 1					
+ j = N					
+ mientras i < N hacer			#(NO VA A EJECUTAR N VECES)
+ j = N – 1				
+ i = i * 2				#CRECIMIENTO DE I ES 2 A LA N -> ORDEN LOGN (INVERSO DE 2^N)
+ fin mientras
+ devolver (j)
+fin
+
+EJERCICIO 3
+int[] cuentas = new int [100];		#ORDEN 100 (se desprecia)
+for (int i = 0; i<100; i++) {		#ORDEN N*100
+ cuentas[i] = enRango (notas, i, i+1);	#ORDEN N
+}
+
+EJERCICIO 4
+unValor (A, N de tipos enteros)
+i = 0
+Si N < 3 entonces
+ devolver (A)
+fin si
+mientras i < 3 hacer					#LA CONDICION SE VA A EJECUTAR SIEMPRE 3 VECES, ES CONSTANTE. LA ENTRADA NO VARIA LA CONDICION.
+ si arreglo[i] = A entonces
+  devolver ((arreglo[0] + arreglo[N-1]) div 2)		#ORDEN 1 (CONSTANTE)
+ fin si
+ i = i + 1						#ORDEN CONSTANTE
+fin mientras
+devolver (A div N)
+Fin
+
+EJERCICIO 5
+otraFunción (claveAbuscar)
+inicio = 0
+fin = N-1
+mientras inicio ≤ fin hacer		#ORDEN LOG N (va dividiendo entre 2 sucesivamente)
+ medio = (inicio + fin) div 2
+ si (arreglo[medio] < claveAbuscar) entonces
+  inicio = medio + 1
+ sino
+  si (arreglo[medio] > claveAbuscar) entonces
+   fin = medio – 1
+  sino
+   devolver medio
+  fin si
+ fin si
+fin mientras
+devolver -1
+fin
+

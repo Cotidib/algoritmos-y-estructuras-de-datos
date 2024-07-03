@@ -1,0 +1,15 @@
+EJERCICIO 1
+
+S es una hoja
+------------------
+El arbol tiene 5 hojas (A,C,N,V y Z)
+V no es decendiente de S, ya que S se encuentra del lado izquierdo de T y V se encuentra del lado derecho de T
+K es ancestro de J
+A y X no estan al mismo nivel, ya que la profundidad de X es 4 y la de A es 6
+------------------
+Para imprimir las letras en orden lexicografico se tiene que imprimir en inorden ya que se mantiene la relacion nodo izquierdo < raiz < nodo derecho
+
+EJERCICIO 2
+
+1. Devuelve la altura de un arbol
+2. Para el peor de los casos y si el arbol no esta equilibrado, tendria un tiempo de ejecucion de O(N). Si estuviera equilibrado seria O(logN)

@@ -1,0 +1,60 @@
+PARTE 1
+EJERCICIO 1
+
+El orden de ejecucion es:
+System.out.print ("No, yo ");
+System.out.print ("pac");
+System.out.println (".");
+System.out.print ("Vos zacata ");
+System.out.print ("pac");
+System.out.println (".");
+System.out.print ("Yo ");
+System.out.print ("pac");
+System.out.println (".");
+
+La salida es:
+No, yo pac.
+Vos zacata pac.
+Yo pac.
+
+Hay saltos de linea despues de cada punto (.)
+
+EJERCICIO 2
+
+public class Zumbido {
+public static void desconcertar (String dirigible) {
+	System.out.println (dirigible);			//(4)
+	sipo ("ping", -5);				//(5)
+}
+public static void sipo (String membrillo, int flag) {
+	if (flag < 0) {
+	System.out.println (membrillo + " sup");	//(6)
+	} else {
+	System.out.println ("ik");			//(2)
+	desconcertar (membrillo);			//(3)
+	System.out.println ("muaa-ja-ja-ja");		//(7)
+	}
+}
+public static void main (String[] args) {
+	sipo ("traqueteo", 13);				//(1)
+}
+}
+
+EJERCICIO 3
+
+(en carpeta ut1pd1)
+
+EJERCICIO 4
+
+A) Sobra un } despues del metodo main y falta un } para cerrar la clase alumno, al final
+B) El metodo recorrer muestra el siguiente error: String index out of range. Esto se debe a que esta iterando mas veces del largo del string. 
+Se arregla cambiando la condicion del for por i < cadena.length(), en lugar de <=.
+C) Muestra el error: Index 8 out of bounds for length 8. Esto se debe a que en un array, el indice del primer elmento es 0. 
+Por ello, cuando queremos el indice el indice 8 de un array de 8 elementosm, en realidad tenemos que buscar el indice 7.
+D) Al ejecutarlo, muestra el error: Cannot invoke "String.charAt(int)" because "string[1]" is null. 
+Para poder devolver el primer caracter de la palabra que se ingresa, se debe usar palabra en lugar de el array de strings para aplicar charAt.
+No es necesario crear un array de strings si ademas tampoco se lo esta rellenado con el valor de palabra. 
+Para arreglaro cambie string por palabra y para obtener el primer caracter use el indice 0, ya que es el correspondiente al primer caracter de una palabra.
+E) Al ejecutarlo, muestra el siguiente error: Integer cannot be cast to class java.lang.String.
+Esto se debe a que el constructor de la clase Integer recibe una variable de tipo int como parametero. Esta clase no esta hecha para castear variables sino para construir objetos de tipo Integer.
+Para resolver el error se puede usar el metodo String.valueOf que recibe un int y devuelve un string.

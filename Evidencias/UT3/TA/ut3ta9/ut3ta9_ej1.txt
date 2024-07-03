@@ -1,0 +1,8 @@
+EJERCICIO 1
+
+Para quitar un elemento de la lista y dejarlo dsiponible para su posterior utilizacion, deberia primero
+identificarse el nodo o elemento de la lista a retirar y deberia moverse la referencia del elemento inmediatamente anterior a modo que su siguiente elemento sea el inmediatamente siguiente del elemento a eliminar. Ademas, se tiene que eliminar la referencia siguiente del elemento eliminado para que no siga conectado a la lista. Se debera recibir un elemento de entrada para poder buscarlo en la lista y se debera devolver
+el elemento eliminado en la salida. Este comportamiento puede ser conveniente para desplazar un elemento hacia una lista diferente. 
+
+En caso de querer destruir un elemento de la lista, el procedimiento seria identico que el de quitar un elemento y dejarlo disponible, con la diferencia que el comportamiento no debe tener como salida dicho elemento. La postcondicion de dicho comportamiento seria que la lista se vio modificada.
+

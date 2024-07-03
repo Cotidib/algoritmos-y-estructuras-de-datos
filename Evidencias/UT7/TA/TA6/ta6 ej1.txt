@@ -1,0 +1,41 @@
+TA6 EJERCICIO 1
+
+Determinar si un grafo contiene ciclos
+LN: Se empieza visitando cada nodo no visitado del grafo. Se lleva un registro de los nodos que fueron visitados usando una pila. Si se encuentra un nodo que ya esta visitado, significa que se encontro un ciclo. Al terminar el recorrido de cada nodo, se elimina de la pila de visitados. Si se detecta un ciclo en cualquier momento, se retorna verdadero. Si se completa el recorrido de todos los nodos sin encotrar ciclos, se retorna falso.
+
+Seudocodigo:
+
+ALGORITMO detectarCiclos(grafo):
+    INICIALIZAR visitado COMO un mapa vacío
+    INICIALIZAR pilaRecursiva COMO un conjunto vacío
+
+    FUNCION tieneCiclo(v):
+        SI visitado[v] == FALSO:
+            MARCAR visitado[v] COMO VERDADERO
+            AGREGAR v A pila
+
+            PARA CADA vecino EN grafo[v]:
+                SI visitado[vecino] == FALSO Y tieneCiclo(vecino):
+                    RETORNAR VERDADERO
+                SI vecino EN pila:
+                    RETORNAR VERDADERO
+                FIN SI
+            ELIMINAR v DE pilaRecursiva
+
+        RETORNAR FALSO
+
+    PARA CADA nodo EN grafo:
+        SI nodo NO ESTA EN visitado:
+            INICIALIZAR visitado[nodo] COMO FALSO
+         FIN SI
+     FIN PARA
+
+    PARA CADA nodo EN grafo:
+        SI visitado[nodo] == FALSO:
+            SI tieneCiclo(nodo):
+                RETORNAR VERDADERO
+            FIN SI
+        FIN PARA
+
+    RETORNAR FALSO
+FIN ALGORITMO

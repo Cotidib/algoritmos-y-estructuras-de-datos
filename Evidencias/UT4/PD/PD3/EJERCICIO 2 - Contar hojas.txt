@@ -1,0 +1,47 @@
+EJERCICIO 2 - Contar hojas
+Clase TArbolAB
+Lenguaje Natural:
+Si la raiz es nula se devuelve 0, sino se llama al metodo contarHojas de la raiz
+
+Precondiciones:
+Existe un arbol no nulo
+
+Postcondiciones:
+El arbol no se modifica
+
+Seudocodigo:
+funcion contarHojas ()
+si (raiz == null)
+ retornar 0
+sino
+ retornar raiz.contarHojas()
+finsi
+fin
+
+Orden de Tiempo de Ejecucion: Tiene el orden de timepo de ejecucion de raiz.contarHojas, ya que las demas son asignaciones y evaluacion de condiciones, que son de O(1)
+
+
+Clase TElementoAB
+Lenguaje Natural:
+Si el hijo izquierdo y derecho del nodo son nulos, significa que el nodo es una hoja y por tanto se suma 1 a un contador. Sino, se llama recursivamente a la funcion sobre el hijo izquierdo y el derecho
+
+Precondiciones:
+Existe un arbol no nulo
+
+Postcondiciones:
+El arbol no se modifica
+
+Seudocodigo:
+funcion contarHojas ()
+contador <- 0
+si (this.hijoIzquierdo == null y this.hijoDerecho == null)
+ contador ++
+sino
+ retornar this.hijoIzquierdo.contarHojas() + this.hijoDerecho.contarHojas()
+finsi
+retornar contador
+fin
+
+Orden de Tiempo de Ejecucion: O(N) ya que se tiene que recorrer todos los nodos del arbol
+
+

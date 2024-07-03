@@ -1,0 +1,56 @@
+EJERCICIO 1
+
+Nuevo nodo otroNodo
+otroNodo.siguiente = nodo1
+nodo2.siguiente = nodo3
+
+Inserta “otroNodo” en la lista, quedando como anterior a nodo1
+
+EJERCICIO 2
+Nuevo nodo otroNodo
+otroNodo = nodo1.siguiente
+nodo1.siguiente = nodo3
+
+Elimina nodo2 de la lista.
+
+EJERCICIO 3
+Nuevo nodo otroNodo
+otroNodo.siguiente = nodo1.siguiente
+nodo1.siguiente = otroNodo
+
+Inserta “otroNodo” en la lista, quedando entre nodo1 y nodo2.
+
+EJERCICIO 4
+Nuevo nodo otroNodo
+Nuevo nodo nodoActual
+nodoActual = primero
+mientras nodoActual <> nulo hacer
+ nodoActual = nodoActual.siguiente
+fin mientras
+nodoActual.siguiente = otroNodo
+
+El algoritmo está mal hecho, ya que dará error en tiempo de ejecución si la lista está vacía.
+
+EJERCICIO 5
+Nuevo nodo otroNodo
+Nuevo nodo nodoActual
+nodoActual = primero
+mientras nodoActual.siguiente <> nulo hacer
+ nodoActual = nodoActual.siguiente
+fin mientras
+nodoActual.siguiente = otroNodo
+
+Inserta correctamente “otroNodo” en la lista, quedando como último nodo.
+
+EJERCICIO 6
+¿Cuál es el costo de memoria en cada caso?
+Para los arrays depende del tamaño que se cree inicialmente el array, que va a ser de un tamano determinado. En cuanto a la memoria necesaria para almacenar un array, se necesita un espacio de memoria para referenciar el inicio del array y otro para el largo del mismo.
+Para listas encadenadas depende de la cantidad de alumnos que tenga en la lista, que va a ser de tamano dinamico. Por cada nodo se necesita una referencia al elemento y otra para el elemento que le sigue en la cadena.
+Las listas encadenadas son menos costosas que los arrays en espacio de memoria, ya que no necesariamente deben ocupar lugares contiguos, a diferencia de los arrays.
+
+¿Cuáles son las consideraciones que tu Equipo haría referentes a la cantidad de alumnos del curso que soporta cada tipo de estructura?
+En el caso de los arrays, la capacidad para registrar alumnos es inicialmente fijo, lo que va a llevar a que eventualmente se quede sin espacio y haya que crear un nuevo array de mayor tamano y copiar todos los datos anteriores.
+En el caso de la lista encadenada, no tiene un tamano inicial determinado ya que la lista se puede expandir dinamicamente cada vez que un nuevo nodo es agregado
+Las listas encadenadas son mas eficientes para agregar nuevos elementos ya que no es tan costoso acceder a la posicion necesaria si se tiene la referencia directa al nodo despues del que se quiere insertar. Si no se tiene la referencia, 
+recorrer la lista para encontrar dicho nodo es mas costoso que hacerlo con un array, ya que tiene que pasar por todos los nodos previos para encontrar el necesario. En un array es mas sencillo buscar teniendo un indice de posicion. 
+

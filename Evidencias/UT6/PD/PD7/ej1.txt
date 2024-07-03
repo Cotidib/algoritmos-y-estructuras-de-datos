@@ -1,0 +1,6 @@
+EJERCICIO 1
+La implementación por defecto del método hashCode en la clase Object generalmente se basa en la dirección de memoria del objeto en la JVM. Esto es porque cada objeto tiene una dirección única en la memoria mientras está vivo y no se ha movido.
+
+En Java, las clases Integer y String sobrescriben el método hashCode de Object para proporcionar implementaciones específicas.
+Para los Integer, el método hashCode devuelve el valor entero que el objeto Integer contiene.
+Para los String el método recorre cada carácter en la cadena y actualiza el valor hash acumulado h utilizando la fórmula h = 31 * h + val[i], donde val[i] es el carácter en la posición i. El número 31 es un número impar, lo que ayuda a reducir la colisión de hash

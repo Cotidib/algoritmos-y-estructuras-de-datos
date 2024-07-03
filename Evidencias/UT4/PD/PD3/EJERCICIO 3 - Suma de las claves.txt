@@ -1,0 +1,50 @@
+EJERCICIO 3 - Suma de las claves
+Clase TArbolAB
+
+Lenguaje Natural:
+Si la raiz es nula se deuvelve 0, sino se llama a la funcion sumarClaves sobre la raiz
+
+Precondiciones:
+Existe un arbol no nulo
+
+Postcondiciones:
+El arbol no se modifica
+
+Seudocodigo:
+funcion sumarClaves()
+si raiz == null
+retornar 0
+sino
+retornar raiz.sumarClaves()
+finsi
+fin
+
+Orden de Tiempo de Ejecucion: El orden de tiempo de ejecucion va a ser el orden de raiz.sumarClaves, ya que las demas sentencias de asignacion y de condicionales son O(1)
+
+Clase TElementoAB
+
+Lenguaje Natural:
+Se inicializa la variable contador con el valor de la clave del nodo actual
+Si el hijo izquierdo del nodo actual no es null entonces se suma al contador la clave del hijo izquierdo y se llama recursivamente a sumarClaves sobre el hijo izquierdo
+Si el hijo derecho del nodo actual no es null entonces se suma al contador la clave del hijo derecho y se llama recursivamente a sumarClaves sobre el hijo derecho
+Se devuelve el valor de contador
+
+Precondiciones:
+Existe un arbol no nulo
+
+Postcondiciones:
+El arbol no se modifica
+
+Seudocodigo:
+funcion sumarClaves()
+contador <- this.clave
+si (this.hijoIzq != null) 
+ contador += this.hijoIzq.clave + this.hijoIzq.sumarClaves();
+finsi
+si (this.hijoDer != null) 
+ contador += this.hijoDer.clave + this.hijoDer.sumarClaves();
+finsi
+retornar contador
+fin
+
+Orden de Tiempo de Ejecucion: O(N) ya que se tiene que recorrer todos los nodos del arbol

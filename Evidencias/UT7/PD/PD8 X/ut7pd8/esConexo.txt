@@ -1,0 +1,13 @@
+funcion Grafo.esConexo
+
+ bpf1 <- this.bpf();
+ si bpf.size() <> this.vertices.size()
+    return false
+ finsi
+
+ grafoInvertido <- invertirAristas(this)
+
+ bpf2 <- grafoInvertido-bpf() 
+ si bpf2.size() <> this.vertices.size()
+    return false
+ finsi

@@ -1,0 +1,4 @@
+tomar los valores mas grandes de cada columna:
+810 550 760 810
+Me quedo con el mas chico:
+550

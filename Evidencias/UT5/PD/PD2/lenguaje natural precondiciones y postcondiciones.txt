@@ -1,0 +1,12 @@
+LN: Se itera sobre los datos de entrada, separando primero por salto de linea y luego por coma.
+Para cada linea leida, se guardan los datos desde el indice 1 en adelante (datos de paginas) en una lista.
+Por cada letra de la palabra que se quiere insertar, se verifica que la letra este dentro del abecedario establecido y se
+obtiene el hijo del nodo que corresponde a la letra actual. Si se llega a un hijo nulo, entonces se agrega la letra a modo de seguir
+construyendo la palabra. Antes de pasar a la siguiente linea, se mueve la referencia del nodo actual hacia el hijo. Luego se agrega la paginas correspondiente al nodo.
+
+Precondiciones:
+Existe un arbol vacio
+Las lineas de los datos ingresados tienen el formato Palabra, Pagina1, ..., PaginaN
+
+Postcondiciones:
+El arbol se modifica

@@ -1,0 +1,37 @@
+Verificar si un arbol es de busqueda
+
+Descripcion
+Si el hijo derecho del nodo es nulo, se verifica si la clave del nodo actual es mayor a la clave de su hijo derecho. Si es asi la funcion retorna false, sino, sigue recorriendo el arbol en su rama derecha.
+Si el hijo izquierdo del nodo es nulo, se verifica si la clave del nodo actual es menor a la clave de su hijo derecho. Si es asi la funcion retorna false, sino, sigue recorriendo el arbol en su rama izquierda.
+Al final de la funcion se devuelve true, en caso de no haber caido en ninguna de las condiciones donde se devuelve false.
+
+Precondiciones
+Existe un arbol no nulo
+
+Postcondiciones
+El arbol no se modifica
+
+Seudocodigo
+funcion boolean esArbolBB()
+si hijoDer <> nulo
+ si clave > hijoDer.clave
+   devolver false
+ sino
+   devolver hijoDer.esArbolBB()
+ finsi
+si hijoIzq <> nulo
+  si clave < hijoIzq.clave
+   devolver false
+  sino
+   devolver hijoIzq.esArbolB()
+  finsi
+finsi
+devolver true
+fin
+
+Tiempo de Ejecucion
+El tiempo de ejecucion es de O(N) ya que se recorren todos los nodos del arbol
+
+Casos de Prueba
+Crear un arbol binario de busqueda ingresando valores que cumplan que para cada nodo ti todas las claves del subárbol izquierdo de ti son menores que la clave de ti y todas las claves del árbol derecho son mayores. Verificar que resultado de ejecutar la funcion en ese arbol sea true.
+Crear un arbol binario que no cumpla con la caracteristica de un arbol binario de busqueda y verificar que ejecutar la funcion de como resultado false.

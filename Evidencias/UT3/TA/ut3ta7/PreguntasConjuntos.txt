@@ -1,0 +1,15 @@
+ ¿Qué es un conjunto?
+Es una coleccion de elementos
+
+¿Cómo se define la pertenencia de elementos al conjunto? ¿puede haber duplicados?
+Si un elemento esta en un conjunto entonces pertenece al conjunto. Una caracteristica de los conjuntos es que no tienen elementos repetidos.
+
+¿Qué es el conjunto Universal?
+Es un conjunto formado por todos los objetos de estudio en cuestion, por ejemplo el conjunto de todos los numeros reales
+
+¿Cuáles son las operaciones propias de los conjuntos, y cómo se expresan matemáticamente?
+Union entre conjuntos: es un conjunto que contiene los elementos de ambos conjuntos, es decir que estan en A o en B. Se expresa con el simbolo U, por ejemplo A U B
+Interseccion entre conjuntos: es un conjunto formado por los elementos que estan tanto en A como en B y se expresa con el simbolo de interseccion, que es identico al de union pero  rotado en el eje horizontal.
+Diferencia de conjuntos: es un conjunto que contiene los elementos de un conjunto que no estan en el otro conjunto. Se simboliza como A\B.
+Complemento de un conjunto: es el conjunto de elementos que se forma por todos los elementos que no estan en A. 
+ 

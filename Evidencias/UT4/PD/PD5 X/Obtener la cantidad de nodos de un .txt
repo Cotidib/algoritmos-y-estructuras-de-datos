@@ -1,0 +1,30 @@
+Obtener la cantidad de nodos de un nivel dado 
+
+Descripcion
+Se ingresan como parametros un nivel deseado, un nivel actual y un elemento.
+Si el elemento es nulo entonces se retorna 0.
+Si el nivel actual es igual al nivel deseado entonces se retorna 1.
+Al final de la funcion se retornan la suma de llamadas recursivas pasando como parametros el nivel deseado, el nivel actual más 1 unidad y el hijo izquierdo y derecho respectivamente en cada llamada.
+
+Precondiciones
+Existe un nivel deseado no nulo
+Existe un nivel actual que inicia en 0 cuando se llama desde la raiz del arbol
+
+Postcondiciones
+El arbol no se modifica
+
+Seudocodigo
+funcion int contarPorNivel (nivelDeseado, nivelActual, elemento)
+si elemento == nulo
+ devolver 0
+finsi
+si nivelActual == nivelDeseado
+ devolver 1
+finsi
+devolver contarPorNivel(nivelDeseado, nivelActual + 1, elemento.hijoIzq) + contarPorNivel(nivelDeseado, nivelActual + 1, elemento.hijoDer)
+
+Tiempo de Ejecucion
+En el peor de los casos va a tener tiempo de ejecucion de O(N) ya que puede ser necesario recorrer el arbol entero si se tiene que contar en el ultimo nivel del arbol. Sino se va a depender de la profundidad del nivel que se quiera calcular. Cuanto menos profundo, menor nodos hay que recorrer.
+
+Caso de Prueba
+Insertar valores predeterminados en un arbol. Ejecutar la funcion ingresando como nivel deseado la profundidad para la cual se conocen la cantidad de nodos en dicho nivel. Comparar resultado de la ejecucion del metodo con el valor esperado.

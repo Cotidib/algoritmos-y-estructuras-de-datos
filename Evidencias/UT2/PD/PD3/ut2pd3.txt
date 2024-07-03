@@ -1,0 +1,51 @@
+EJERCICIO 5.4
+La unica afirmacion correcta es la de T1(N) + T2(N) = O(F(N))
+
+EJERCICIO 5.5
+El costo total es T1(N) + T2(N) siendo  T1(N) y T2(N) iguales a O(F(N)) es O(F(N))
+
+EJERCICIO 5.6
+x^2 -> O(x^2)
+x -> O(x)
+x^3 + x -> O(x^3)
+x^2 - x -> O(x^2)
+x^4/(x-1) -> O(x^3)
+
+
+EJERCICIO 5.10
+N 	  | O(N^3)    | O(N^2) | O(N logN) | O(N)
+100.000   | 218000    | 13,17  | 0,017467  | 0,005571
+1.000.000 | 218000000 | 131700 | 0,185363  | 0,056338
+
+El tiempo de ejecucion cubico estimado para N 100.000 es 218000 y se obtuvo de multiplicar el valor en segundos para N igual a 10.000 por 10^3.
+El tiempo de ejecucion cubico estimado para N 1.000.000 es 218000000 y se obtuvo de multiplicar el valor en segundos para N igual a 100.000 por 10^3.
+El tiempo de ejecucion cuadratico estimado para N 1.000.000 es 131700 y se obtuvo de multiplicar el valor en segundos para N igual a 100.000 por 10^2.
+De todas maneras, observando las relaciones de crecimiento de los valores que ya existen en la tabla se puede sospechar que el crecimiento estimado va a ser mayor, ya que usar los mismos calculos para calcular (o verificar) los tiempos de ejecucion que ya se encuentran en la tabla no dan los mismos valores exactos. Por ejemplo, el tiempo de ejecucion cubico estimado para N 100 seria 0,000100 a partir de multiplicar el valor en segundos para N igual a 10 por 10^3.
+
+EJERCICIO 5.12
+Si el algoritmo requiere 0,4ms para una entrada de 100:
+Si el tiempo de ejecucion es lineal, el tiempo de ejecucion para 500 es 0,4*(5) (N^1 con N = 5)
+Si el tiempo de ejecucion es cubico, el tiempo de ejecucion para 500 es 0,4*(5^3) (N^3 con N = 5)
+Si el tiempo de ejecucion es cuadratico, el tiempo de ejecucion para 500 es 0,4*(5^2) (N^2 con N = 5)
+Si el tiempo de ejecucion es N logN, el tiempo de ejecucion para 500 es 0,4*(5*log5) (N logN con N = 5)
+
+EJERCICIO 5.13
+Tiempo de ejecucion de sumar dos enteros de N digitos a mano es de O(N).
+Tiempo de ejecucion de multiplicar dos enteros de N digitos a mano es O(N^2).
+
+EJERCICIO 5.14
+La instruccion mas interna thisSum += a[j] se va a ejecutar N(N-1) veces
+
+EJERCICIO 5.15
+El algoritmo tarda 10 segundos en ejecutarse para 1000 elementos en la maquina A. La maquina B es 3 veces mas rapida.
+Si el tiempo de ejecucion es lineal, la maquina B tardara 10*(2.5)/3 en ejecutar para 2500 elementos.
+Si el tiempo de ejecucion es cuadratico, la maquina B tardara 10*(2.5^2)/3 en ejecutar para 2500 elementos.
+Si el tiempo de ejecucion es cubico, la maquina B tardara 10*(2.5^3)/3 en ejecutar para 2500 elementos.
+Si el tiempo de ejecucion es N logN, la maquina B tardara 10*(2.5*log2.5)/3 en ejecutar para 2500 elementos.
+
+EJERCICIO 5.16
+El algoritmo requiere 0,5ms para una entrada de 100.
+Si el tiempo de ejecucion es lineal, puede resolverse una entrada de 100*2000 en 1 minuto.
+Si el tiempo de ejecucion es cuadratico, puede resolverse una entrada de 100*(2000^2) en 1 minuto.
+Si el tiempo de ejecucion es cubico, puede resolverse una entrada de 100*(2000^3) en 1 minuto.
+Si el tiempo de ejecucion es N logN, puede resolverse una entrada de 100*(2000*log2000) en 1 minuto.

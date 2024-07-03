@@ -1,0 +1,4 @@
+1. Cantidad de elementos: 107
+2. La siguiente ciudad a Hong Kong es Shenzhen
+3. Ninguna de las anteriores. Queda vacia.
+4. El resultado de la operacion es Montreal;_Caracas;_Tulsa;_Mobile;_Vancouver

@@ -1,0 +1,56 @@
+EJERCICIO 1
+
+funcion factorial(numero)
+ si numero == 0                   // caso base
+ entonces retornar 1              // sentencia del caso base
+ finsi
+
+ retornar numero * factorial(numero - 1)
+fin funcion
+
+El algoritmo siempre progresa hacia el caso base porque ejecuta la funcion restandole 1 a numero en cada iteracion
+El orden de tiempo de ejecucion es N, ya que la sentencia de retorno es de O(1) pero esta llamando recursivamente, de manera que esa linea se va a ejecutar N-1 veces.
+
+EJERCICIO 2
+
+//suma de los primeros n enteros de un array
+funcion sumaLineal (Array, n)
+ si n == 1                        // caso base
+  retornar Array[0]               // sentencia del caso base
+ sino
+  retornar sumaLineal(Array, n-1) + Array[n-1]
+fin funcion
+
+El algoritmo siempre progresa hacia el caso base porque ejecuta la funcion restandole 1 a n en cada iteracion, por lo que en algun punto va a llegar a n==1
+El orden de tiempo de ejecucion es N, ya que la sentencia de retorno es de O(1) pero esta llamando recursivamente, de manera que esa linea se va a ejecutar N-1 veces.
+
+• ¿Qué sucede si el parámetro n es negativo? Queda en loop infinito
+• ¿Qué sucede si el vector A está vacío? Hay un error en la ejecucion ya que no se puede acceder a los elementos del array
+
+EJERCICIO 3
+funcion potencia (x, n)
+ si n == 0                        // caso base
+  retornar 1                      // sentencia del caso base
+ sino
+ retornar x*potencia(x, n-1)
+fin funcion
+
+El algoritmo siempre progresa hacia el caso base porque ejecuta la funcion restandole 1 a n en cada iteracion, por lo que en algun punto va a llegar a n==0
+El orden de tiempo de ejecucion es N, ya que la sentencia de retorno es de O(1) pero esta llamando recursivamente, de manera que esa linea se va a ejecutar N veces.
+
+• ¿Tu algoritmo soporta números reales o sólo enteros – para ambos parámetros? soporta reales para la X pero solo enteros para la n
+• ¿qué sucede si uno, otro o ambos parámetros son negativos? si n es negativo queda en loop infinito. X puede ser un numero negativo.
+
+EJERCICIO 4
+funcion invertirArray(array, i, j)
+ si i<j                         // caso base
+  iAntes <- array[i]            // sentencia del caso base
+  jAntes <- array[j]            // sentencia del caso base
+  array[i] <- jAntes            // sentencia del caso base
+  array[j] <- iAntes            // sentencia del caso base
+  invertirArray(array, i+1, j-1)
+ finsi
+fin funcion
+ 
+El algoritmo va a progresar hasta el caso base porque se va cerrando entre i y j hasta i y j sean iguales. Ahi termina de ejecutar.
+El tiempo de ejecucion es de O(N) ya que se va ejecutar tantas veces como  elementos haya entre i y j dividido 2.

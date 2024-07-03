@@ -1,0 +1,53 @@
+EJERICIO 4 - Contador por nivel
+
+Clase TArbolAB
+Lenguaje Natural
+Si la raiz es nula se retorna 0, sino se llama al a funcion contarPorNivel de la raiz
+
+Precondiciones
+Existe un nivelDeseado no nulo
+Existe un arbol no nulo
+
+Postcondiciones
+El arbol no se modifica
+
+Seudocodigo
+funcion int contarPorNivel(nivelDeseado)
+si raiz == nulo
+retornar 0
+sino
+retornar raiz.contarPorNivel(raiz, 1, nivelDeseado)
+finsi
+fin
+
+Orden de Tiempo de Ejecucion
+El orden de tiempo de ejecucion va a ser el orden de timepo de ejecucion de raiz.contarPorNivel()
+
+
+Clase TElementoAB
+Lenguaje Natural
+Si el nodo es nulo se devuelve 0
+Si el nivel actual es igual al nivel deseado se devuelve 1
+Se llama recursivamente a la funcion retornando el resultado de ejecutar contarPorNivel recorriendo el hijo izquierdo y ejecutar contarPorNivel recorriendo el hijo derecho
+
+Precondiciones
+Existe un nivelDeseado no nulo
+Existe un nivelActual no nulo
+Existe un nodo no nulo
+
+Postcondiciones
+El arbol no se modifica
+
+Seudocodigo
+funcion int contarPorNivel(nodo, nivelActual, nivelDeseado)
+si nodo == nulo
+retornar 0
+finsi
+si nivelActual == nivelDeseado
+retornar 1
+finsi
+retornar contarPorNivel(nodo.hijoIzq, nivelActual + 1, nivelDeseado) + contarPorNivel(nodo.hijoDer, nivelActual + 1, nivelDeseado)
+fin
+
+Orden de Tiempo de Ejecucion
+El tiempo de ejecucion va a ser de O(N) ya que en el peor de los casos va a tener que recorrer todos los nodos del arbol

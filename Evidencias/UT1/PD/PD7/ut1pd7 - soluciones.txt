@@ -1,0 +1,21 @@
+EJERCICIO 1
+
+Nunca devuelve true porque el operador == compara referencias, no valores. 
+Por eso, al estar comparando una referencia a "1" con una referencia a "1000", siempre va a resultar
+en que son distintas referencias, aunque la referencia de "1" eventualmente alcance un valor igual a 1000.
+Se diferencia con C# en que en C# el operador == devuelve true cuando el valor del contenido de los operandos es el mismo.
+
+EJERCICIO 2
+El codigo 1 devuelve true, ya que s1 y s2 son referencias al mismo objeto. El codigo 2 devuevle false ya que s1 y s2 son referencias a objetos distintos
+
+
+Referencias:
+Free Learning Platform For Better Future (s.f.). Java String compare. Java T Point. https://www.javatpoint.com/string-comparison-in-java
+Microsoft (04 de Julio de 2023). Equality operators - test if two objects are equal or not. Microsoft Learn. https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/equality-operators
+
+La forma correcta del Ejercicio 1 de hacer un contador seria usar enteros en lugar de strings:
+
+int n = 1;
+while (n != 1000) {
+  n *= 10;
+}

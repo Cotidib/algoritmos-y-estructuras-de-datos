@@ -1,0 +1,63 @@
+EJERCICIO 1 - Insercion de Nodo en Arbol
+Clase TArbolBB
+
+Lenguaje Natural:
+Si la raiz es nula, se asignal el nodo nuevo a la raiz del arbol. Si no es nula, entonces
+se llama recursivamente a la funcion insertar del elemento sobre la raiz, pasando por parametro el nodo nuevo.
+
+Precondiciones:
+Existe un arbol no nulo
+Existe un nodo de tipo TElementoAB no nulo
+
+Postcondiciones:
+El arbol se modifica
+El nodo pertenece al arbol
+
+Seudocodigo:
+funcion Insertar (TElementoAB nodo)
+si raiz == nulo					//O(1)
+ raiz <- nodo					//O(1)
+sino 
+ raiz.insertar(nodo)				//O(logN) (ver funcion insertar de TElementoAB)
+finsi
+fin
+
+Orden de Tiempo de Ejecucion: 
+
+Clase TElementoAB
+
+Lenguaje Natural:
+Si el valor del nodo actual es igual al nodo que se quiere insertar, no se hace nada.
+Si el valor del nodo actual es menor que el valor del nodo a insertar y el hijo izquierdo del nodo actual es nulo, se inserta el nodo nuevo como el hijo izquierdo del nodo. Si no es nulo, entonces se recorre recursivamente hasta llegar a un nodo izquierdo libre.
+Si el valor del nodo actual es mayor al valor del nodo a insertar y el hijo derecho del nodo actual es nulo, se inserta 
+el nodo nuevo como el hijo derecho del nodo. Si no es nulo, entonces se recorre recursivamente hasta llegar a un nodo derecho libre.
+
+Precondiciones:
+Existe un nodo no nulo a insertar
+Existe un arbol no nulo
+
+Postcondiciones:
+El nodo se modifica, agregando un hijo izquierdo o un hijo derecho
+
+Seudocodigo:
+funcion insertar (TElementoAB nodo)
+si nodo.valor == this.valor
+ retornar
+si nodo.valor < this.valor
+ si this.izquierda == null
+  this.izquierda <- nodo
+ sino
+  this.izquierda.insertar(nodo)
+ finsi
+finsi
+si nodo.valor > this.valor
+ si this.derecha == null
+  this.derecha <- nodo
+ sino
+  this.derecha.insertar(nodo)
+ finsi
+finsi
+fin
+
+Orden de Tiempo de Ejecucion: O(log(N)) ya que podemos asegurar que no se van a recorrer todos los nodos del arbol, 
+sino que se va a ir bifurcando continuamente de forma similar a una busqueda binaria, que tambien es de O(log(N))

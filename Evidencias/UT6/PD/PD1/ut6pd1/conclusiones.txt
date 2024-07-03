@@ -1,0 +1,15 @@
+MedicionPrefijoTrie,17616400,10450571
+MedicionPrefijoTrieMap,19835000,9206627
+
+Tiempo 
+MedicionPrefijoTrie < MedicionPrefijoTrieMap
+
+Memoria
+MedicionPrefijoTrieMap < MedicionPrefijoTrie
+
+
+Se puede concluir que el algoritmo de Trie es el mas eficiente en cuanto a tiempo, pero es menos eficiente en memoria que 
+el algoritmo de TrieMap. Entiendo que la implementacion en Trie ocupa mas memoria porque se esta usando un array y por tanto
+no se hace un uso eficiente del espacio. En cuanto a los tiempos de ejecucion, el acceso usando un array es mas rapido que el
+acceso o busqueda en un HashMap. Mientras en un array la busqueda es directa con un indice, en el HashMap podria requerirse recorrer
+toda una lista para encontrar un elemento, lo que lo hace mas lento en el peor de los casos.

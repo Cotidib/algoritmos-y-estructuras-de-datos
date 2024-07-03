@@ -1,0 +1,24 @@
+EJERCICIO 1
+PREGUNTA 2
+A diferencia del PD6, en esta caso no utilizamos la implementacion de Lista en la clase Epresa, en su lugar usamos ArrayList
+y usamos sus metodos add, get, size y remove.
+
+PREGUNTA 3
+Utilizar la implementacion ArrayList es mas costoso porque internamente java inicializa esta lista como un array de 10 espacios. 
+En nuestra implementacion utilizando nodos, iniciamos la lista solamente con un primer nodo (que puede ser nulo segun la implementacion) y solamente
+usamos espacios de memoria para la cantidad actual de nodos que tengamos en la lista. En un ArrayList si bien se redimensiona dinamicamente, se empieza
+ocupando un espacio arbitrario.
+
+PREGUNTA 4
+El orden de tiempo de ejecucion para insertar corresponde al orden de timepo de ejecucion de la funcion add de java, que es de orden constante O(1) ya que las inserciones se hacen usando un indice.
+Igual para el orden de timepo de ejecucion para eliminar, depende del remove que tambien se utiliza un indice, por tanto es de orden constante O(1).
+En el caso de la busqueda, es necesario recorrer toda la lista hasta encontrar el elemento, por lo que en el peor caso se debera reocrrer la lista entera y por tanto podemos decir que es de orden O(N)
+De igual forma para listar, es necesario recorrer todos los elementos cada vez, por lo que sera de orden O(N) siendo N el tamao de la lista
+El orden de tiempo de ejecucion para cantidad de surcusales depende del metodo size de ArrayList. Retornar dicho valor es retornar un atributo de la clase ArrayList, por lo que acceder a dicho dato tiene orden O(1)
+Indicar si la lista esta vacia tambien depende del metodo size y una comparacion, por lo que tambien tendra orden O(1)
+
+PREGUNTA 5
+1. Cantidad de elementos: 107
+2. La siguiente ciudad a Hong Kong es Shenzhen
+3. Ninguna de las anteriores. Queda 1 ciudad, ya que hay un caracter especial agregado delante de Tokio al ser el primero en el archivo. Esto esta relacionado al UTF-8 byte order mark.
+4. El resultado de la operacion es Montreal;_Caracas;_Tulsa;_Mobile;_Vancouver

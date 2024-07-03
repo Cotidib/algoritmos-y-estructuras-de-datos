@@ -1,0 +1,77 @@
+● substring 
+Devuelve un nuevo string que es un substring del string original.
+
+String substring(int beginIndex, int endIndex)
+Empieza en el beginIndex especificado y se extiende hasta endIndex - 1. 
+
+String substring(int beginIndex)
+Se especifica el indice del primer caracter y se extiende hasta el final de string.
+
+● split
+Divide un string en un array de strings, usando como criterio para separar el argumento que se pasa por parametro
+String[] split(String regex)
+Se especifica una expresion regular para encontrar el separador
+
+String[] split(String regex, int limit)
+En esta variante ademas se especifica el tamaño maximo del array que se devuelve
+
+● subSequence
+CharSequence subSequence(int beginIndex, int endIndex)
+Devuelve una secuencia la secuencia de caracteres desde beginIndex hasta endIndex
+
+● trim
+String trim()
+Devuelve una copia del string original, removiendo los espacios al principio y al final.
+
+● toLowerCase
+String toLowerCase()
+Devuelve una copia del string con todas sus letras en minuscula
+
+● toUpperCase
+String toUpperCase()
+Devuelve una copia del string con todas sus letras en mayuscula
+
+● indexOf
+int indexOf(int ch)
+Devuelve el indice de la primer coincidencia con un caracter especificado
+
+int indexOf(int ch, int fromIndex)
+Devuelve el indice de la primer coincidencia con un caracter dado, buscando desde el fromIndex
+
+int indexOf(String str)
+Devuelve el indice de la primer coincidencia con el substring espeificado
+
+int indexOf(String str, int fromIndex)
+Devuelve el indice de la primer coincidencia con el substring especificado, buscando desde el fromIndex
+
+● lastIndexOf – ídem
+int lastIndexOf(int ch)
+Devuelve el indice de la ultima coincidencia con un caracter especificado
+
+int lastIndexOf(int ch, int fromIndex)
+Devuelve el indice de la ultima coincidencia con un caracter dado, buscando hacia atras desde el fromIndex
+
+int lastIndexOf(String str)
+Devuelve el indice de la ultima coincidencia con el substring espeificado
+
+int lastIndexOf(String str, int fromIndex)
+Devuelve el indice de la ultima coincidencia con el substring especificado, buscando hacia atras desde el fromIndex
+
+● contains
+boolean contains(CharSequence s)
+Devuelve true si un string contiene el caracter especificado
+
+● replace
+String replace(char oldChar, char newChar)
+Devuelve un nuevo string que resulta de reemplazar todos los oldChar con un caracter dado newChar
+
+String replace(CharSequence target, CharSequence replacement)
+Reemplaza cada substring del string que coincide con el target, con una secuencia especificada en replacement
+
+● replaceAll
+String replaceAll(String regex, String replacement)
+Reemplaza con replacement cada substring que coincide con la expresion regular dada
+
+● replaceFirst
+String replaceFirst(String regex, String replacement)
+Reemplaza el primer substring que coincide con una expresion regular dada

@@ -1,0 +1,42 @@
+clase Cola
+	inicializar array de Objetos arreglo
+	inicilizar int primero
+	inicializar int proximo
+	
+	constructor Cola:
+		arreglo <- instancia de Object[10] //vector
+		primero <- 0
+		proximo <- 0
+	fin constructor
+
+	//poneEnCola: recibe un elemento a insertar. Primero se verifica si el indice que le sigue a
+	la proxima posicion para insertar coincide con primero. Si es asi, significa que en la proxima insercion
+	podria sobreescribirse el primer elemento, por lo que consideramos la cola llena. En ese caso se redimensiona.
+	Luego de asegurarse de tener espacio suficiente para insertar, se inserta el elemento en la posicion de proximo
+	y se mueve dicho posicion un lugar hacia adelante. Si luego de avanzar una posicion, el proximo es igual
+	al largo del arreglo, quiere decir que llegamos al final de la cola, pero como es una cola circular se
+	reinicia el valor de proximo para seguir insertando desde el principio.
+	
+	funcion poneEnCola(unElemento de tipo Object):
+		si (prox + 1) % largo del arreglo == primero:
+			redimensionar()
+		fin si
+		
+		arreglo[proximo] = unElemento;
+		proximo <- proximo + 1
+		
+		si proximo == largo del arreglo
+			proximo = 0
+		fin si
+	fin funcion
+
+	// quitaDeCola: se elimina el primer elemento de la cola, se mueve la posicion de primero hacia un lugar adelante
+	 y se retorna el elemento eliminado al final de la funcion
+
+	funcion quitaDeCola:
+		resultado <- arreglo[primero]
+		primero <- primero + 1
+		retorna resultado
+	fin funcion
+	
+

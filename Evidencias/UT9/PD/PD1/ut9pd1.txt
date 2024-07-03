@@ -1,0 +1,11 @@
+EJERCICIO 1
+1. Un vector ascendente se genera tomando los numeros entre 0 y el TAMANIO_MAX en ese orden
+y agregandolos a un array
+2. Un vector descendente se genera tomando los numeros entre 0 y el TAMANIO_MAX en ese orden
+y agregandolos a un array desde el final hacia el principio
+3. Un vector aleatorio se genera tomando los numeros entre 0 y el TAMANIO_MAX en ese orden y
+calculando una posicion aleatoria entre 0 y TAMANIO_MAX. Si esa posicion ya se encuentra ocupada, 
+se calcula el modulo hasta encontrar una nueva posicion disponible donde guardar el elemento.
+4. Contiene TAMANIO_MAX elementos. Se puede modificar el valor de TAMANIO_MAX implementando un constructor
+5. Recorriendo todos los elementos verificando que cada elemento es menor que el elemento siguiente. 
+Tomaria un tiempo de O(N)

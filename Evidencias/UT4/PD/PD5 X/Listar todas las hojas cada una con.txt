@@ -1,0 +1,37 @@
+Listar todas las hojas cada una con su nivel.
+
+Descripcion
+Se inicializa una variable para guardar la cadena de salida.
+Se ingresa por parametro un nivel actual.
+Se evalua si el hijo izquierdo y el hijo derecho son nulos, en cuyo caso se concatena la clave del nodo junto con el valor del nivel actual a la cadena de salida.
+De ser falsa nla evaluacion anterior, se evalua si el hijo izquierdo es distinto de nulo, en cuyo caso se llama recursivamente a la funcion sobre el hijo izquierdo, pasando como parametro el nivel actual más 1 unidad.
+De ser falsa la evaluacion anterior, se evalua si el hijo derecho es distinto de nulo, en cuyo caso se llama recursivamente a la funcion sobre el hijo derecho, pasando como parametro el nivel actual más 1 unidad.
+Al final de la funcion se devuelve la cadena de salida.
+
+Precondiciones
+Existe un nivelActual no nulo que se inicializa en 0 cuando se llama desde la raiz del arbol.
+Existe un arbol no nulo.
+
+Postcondiciones
+El arbol no se modifica
+
+Seudocodigo
+funcion String listarHojas (int nivelActual)
+resultado <- ""
+si hijoIzq == null && hijoDer == null
+ resultado +<- etiqueta + nivelActual
+finsi
+si hijoIzq <> nulo
+ resultado +<- hijoIzq.listarHojas(nivelActual+1)
+finsi
+si hijoDer <> nulo
+ resultado +<- hijoDer.listarHojas(nivelActual+1)
+finsi
+devolver resultado
+fin
+
+Tiempo de Ejecucion
+Debido a que es necesario recorrer todo el arbol para encontrar sus hojas, entonces el orden de tiempo de ejecucion va a ser de O(N)
+
+Caso de Prueba
+Insertar en un arbol valores predeterminados. Ejecutar la funcion y comparar el resultado con los valores esperados conocidos de las hojas del arbol con sus respectivos niveles. Tambien probar con un arbol que solo tenga raiz.

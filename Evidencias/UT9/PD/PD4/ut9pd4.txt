@@ -1,0 +1,36 @@
+EJERCICIO 1
+El tiempo de ejecucion del algoritmo de Shell depende de la eleccion de las secuencias de incrementos. La ordenacion shell es capaz de ordenar una matriz si el gap termina en algun momento en 1. Shell sugirio emepzar con un valor de gap igual a N/2 e ir dividiendo a la mitad hasta alcanzar 1, siendo el peor caso un tiempo de ejecucion de O(N^2) dado cuando N es una potencia de 2 y si todos los elementos de gran valor estan en posiciones con un indice par y si todos los elementos pequeños estan en posiciones de indice impar. Para evitar el peor caso, si dividimos el gap entre 2 y da par, podemos sumar 1 para hacerle impar. En este caso el tiempo de ejecucion es de O(N^3/2)
+
+Otras secuencias puede ser la division por 2,2 siendo este ultimo el mas eficiente segun la tabla de tiempos de ejecucion.
+
+(Fuente: Estructura de Datos en Java, Mark Allen Weiss, capitulo 8.4).
+
+EJERCICIO 2
+Una eleccion incorrecta de pivot seria usar el primer elemento, ya que si la entrada esta previamente ordenada o en orden inverso, el pivot no hace buenas particiones teniendo en cuenta que es un algoritmo recursivo. Esto terminaria en un tiempo de ejecucion cuadratico. Lo mismo pasaria con la mayor de las dos primeras claves diferentes.
+
+Una eleccion segura es tomar el elemento central, donde la posibilidad de encontrar por azar un caso que tarde en ejecutarse mas que el caso promedio es pequeña. De esta manera se evita los casos malos que se derivan de entradas no aleatorias.
+
+Otra mejor opcion es la particion basada en la mediana de tres, que toma la mediana del primero elemento, del elemento central y del ultimo elemento. Esto garantiza una division equitativa. Como la mediana de la entrada es dificil de calcular y relentiza la ordenacion, se usa el muestreo con un subconjunto de la entrada.
+
+Java utiliza la tecnica de Dual Pivot.
+
+EJERCICIO 3
+funcion disjuntos(A, B):
+    # Ordenar ambos conjuntos
+    A.quicksort()
+    B.quicksort()
+    
+    i = 0
+    j = 0
+    
+    # Recorrer ambos conjuntos
+    mientras i < len(A) and j < len(B):
+        si A[i] < B[j]:
+            i += 1
+        si A[i] > B[j]:
+            j += 1
+        sino:
+            return False  # los conjuntos no son disjuntos
+    
+    # Si no se encontró ningún elemento común
+    return True  

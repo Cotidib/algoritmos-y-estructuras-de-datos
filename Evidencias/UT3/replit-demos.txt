@@ -1,0 +1,9 @@
+LINKED LIST
+https://replit.com/@Cotidib/Linked-List-Nodes
+
+STACK
+https://replit.com/@Cotidib/Stacks#src/main/java/Main.java
+
+COLAS
+https://replit.com/@Cotidib/Colas#src/main/java/ColaEnlazada.java
+https://replit.com/@Cotidib/Colas#src/main/java/Cola.java

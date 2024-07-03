@@ -1,0 +1,31 @@
+EJERCICIO 1
+
+1. Para este tipo de problema es conveniente usar Grafos. En este caso, dado que existe simetria entre los costos de conexion de cada CC, se pueden usar Grafos No Dirigidos. Para hacer la menor cantidad de conexiones necesarias para conectar todos los CC con el menor costo se puede construir un AAM, utilizando ya sea el algoritmo de Prim o el de Kruskal.
+
+2. 
+funcion TGrafo( conjunto de aristas T);
+U: conjunto de vértices;
+u, v: vértice;
+COMIENZO
+	T. Vaciar;
+	U.Agregar (1);
+	MIENTRAS U < > V hacer
+		elegir una arista (u,v) de costo mínimo tal que u está en U y v está en V-U;
+	T.agregar (u,v);
+	U.agregar(v);
+FIN MIENTRAS
+FIN;
+
+EJERCICIO 2
+
+1.
+funcion booleano conectados (v,w)
+COMIENZO
+visitados <- nueva Lista
+v.bpf(visitados)
+SI visitados contiene w entonces
+	devolver true	
+SINO
+	devolver false
+FIN SI
+FIN;
